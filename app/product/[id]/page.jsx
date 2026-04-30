@@ -4,10 +4,12 @@ import { PRODUCTS } from "../../../data/products";
 export const dynamic = "force-static";
 export const revalidate = 3600;
 
-// ✅ Metadata (sync)
-export function generateMetadata({ params }) {
+// ✅ Metadata (params must be awaited in Next 16)
+export async function generateMetadata({ params }) {
+  const resolvedParams = await params;
+
   const product = PRODUCTS.find(
-    (p) => String(p.id) === String(params.id)
+    (p) => String(p.id) === String(resolvedParams.id)
   );
 
   if (!product) {
@@ -41,10 +43,12 @@ export function generateMetadata({ params }) {
   };
 }
 
-// 🔥 NO async → no streaming
-export default function ProductPage({ params }) {
+// 🔥 KEEP async (required for params)
+export default async function ProductPage({ params }) {
+  const resolvedParams = await params;
+
   const product = PRODUCTS.find(
-    (p) => String(p.id) === String(params.id)
+    (p) => String(p.id) === String(resolvedParams.id)
   );
 
   if (!product) {
