@@ -3,9 +3,8 @@ import { PRODUCTS } from "../../../data/products";
 // 🔥 FORCE STATIC (critical for Facebook)
 export const dynamic = "force-static";
 export const revalidate = 3600;
-export const dynamicParams = false;
 
-// ✅ Metadata (no async params needed)
+// ✅ Metadata (sync)
 export function generateMetadata({ params }) {
   const product = PRODUCTS.find(
     (p) => String(p.id) === String(params.id)
@@ -42,7 +41,7 @@ export function generateMetadata({ params }) {
   };
 }
 
-// 🔥 REMOVE async → prevents streaming
+// 🔥 NO async → no streaming
 export default function ProductPage({ params }) {
   const product = PRODUCTS.find(
     (p) => String(p.id) === String(params.id)
