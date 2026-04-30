@@ -1,4 +1,6 @@
 import { PRODUCTS } from "../../data/products";
+import { redirect } from "next/navigation";
+import { headers } from "next/headers";
 
 export async function generateMetadata({ params }) {
   const resolvedParams = await params;
@@ -39,6 +41,22 @@ export default async function ProductPage({ params }) {
 
   if (!product) return <div>Not found</div>;
 
+  // 🔥 Correct way to read headers in Next.js 16
+  const headersList = headers();
+  const ua = headersList.get("user-agent") || "";
+
+  // 🔥 Detect bots
+  const isBot =
+    ua.includes("facebookexternalhit") ||
+    ua.includes("WhatsApp") ||
+    ua.includes("Facebot");
+
+  // 🔥 Redirect real users to main site
+  if (!isBot) {
+    redirect(`https://muzigroups.com/product/${product.id}`);
+  }
+
+  // 🔥 Bots will render preview
   return (
     <div style={{ padding: "2rem" }}>
       <h1>{product.name}</h1>
