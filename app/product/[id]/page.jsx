@@ -19,17 +19,19 @@ export async function generateMetadata({ params }) {
   return {
     title: product.name,
     description: `₹${product.price} | MUZI Fashions`,
-    openGraph: {
-      title: product.name,
-      description: `Buy now for ₹${product.price}`,
-      images: [
-        {
-          url: product.image,
-          width: 1200,
-          height: 630,
-        },
-      ],
+openGraph: {
+  title: product.name,
+  description: `Buy now for ₹${product.price}`,
+  url: `https://muzi-preview.vercel.app/product/${product.id}`, // ✅ ADD THIS
+  siteName: "MUZI Fashions",
+  images: [
+    {
+      url: product.image,
+      width: 1200,
+      height: 630,
     },
+  ],
+},
     twitter: {
       card: "summary_large_image",
       title: product.name,
