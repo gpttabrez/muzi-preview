@@ -14,6 +14,7 @@ E:.
 |   README.md
 |   structure.txt
 |   tsconfig.json
+|   vercel.json
 |   
 +---.next
 |   +---dev
@@ -47,45 +48,101 @@ E:.
 |   |   |   |   
 |   |   |   \---turbopack
 |   |   |       \---2275bd85
-|   |   |               00000001.sst
 |   |   |               00000002.sst
 |   |   |               00000003.sst
 |   |   |               00000004.sst
 |   |   |               00000005.meta
-|   |   |               00000006.meta
 |   |   |               00000007.meta
 |   |   |               00000008.meta
-|   |   |               00000009.sst
 |   |   |               00000010.sst
 |   |   |               00000011.sst
 |   |   |               00000012.meta
 |   |   |               00000013.meta
-|   |   |               00000014.meta
 |   |   |               00000015.sst
-|   |   |               00000016.sst
 |   |   |               00000017.sst
 |   |   |               00000018.sst
 |   |   |               00000019.meta
 |   |   |               00000020.meta
-|   |   |               00000021.meta
 |   |   |               00000022.meta
-|   |   |               00000023.sst
 |   |   |               00000024.sst
 |   |   |               00000025.sst
 |   |   |               00000026.meta
 |   |   |               00000027.meta
-|   |   |               00000028.meta
-|   |   |               00000029.sst
-|   |   |               00000030.sst
-|   |   |               00000031.sst
-|   |   |               00000032.sst
 |   |   |               00000033.sst
 |   |   |               00000034.sst
 |   |   |               00000035.sst
 |   |   |               00000036.meta
 |   |   |               00000037.meta
-|   |   |               00000038.meta
 |   |   |               00000039.meta
+|   |   |               00000041.sst
+|   |   |               00000042.sst
+|   |   |               00000043.sst
+|   |   |               00000044.meta
+|   |   |               00000045.meta
+|   |   |               00000046.meta
+|   |   |               00000051.sst
+|   |   |               00000053.sst
+|   |   |               00000054.sst
+|   |   |               00000055.meta
+|   |   |               00000057.meta
+|   |   |               00000058.meta
+|   |   |               00000060.sst
+|   |   |               00000061.sst
+|   |   |               00000062.sst
+|   |   |               00000063.meta
+|   |   |               00000064.meta
+|   |   |               00000066.meta
+|   |   |               00000068.sst
+|   |   |               00000069.sst
+|   |   |               00000070.sst
+|   |   |               00000071.meta
+|   |   |               00000072.meta
+|   |   |               00000074.meta
+|   |   |               00000076.sst
+|   |   |               00000077.sst
+|   |   |               00000078.meta
+|   |   |               00000080.meta
+|   |   |               00000081.sst
+|   |   |               00000083.sst
+|   |   |               00000084.meta
+|   |   |               00000085.meta
+|   |   |               00000087.sst
+|   |   |               00000089.sst
+|   |   |               00000090.sst
+|   |   |               00000091.meta
+|   |   |               00000092.meta
+|   |   |               00000094.meta
+|   |   |               00000096.sst
+|   |   |               00000097.sst
+|   |   |               00000098.meta
+|   |   |               00000100.meta
+|   |   |               00000101.sst
+|   |   |               00000102.sst
+|   |   |               00000103.meta
+|   |   |               00000105.sst
+|   |   |               00000106.sst
+|   |   |               00000107.sst
+|   |   |               00000108.meta
+|   |   |               00000109.meta
+|   |   |               00000110.meta
+|   |   |               00000111.sst
+|   |   |               00000112.sst
+|   |   |               00000113.sst
+|   |   |               00000114.meta
+|   |   |               00000115.meta
+|   |   |               00000116.meta
+|   |   |               00000117.sst
+|   |   |               00000118.sst
+|   |   |               00000119.sst
+|   |   |               00000120.meta
+|   |   |               00000121.meta
+|   |   |               00000122.meta
+|   |   |               00000123.sst
+|   |   |               00000124.sst
+|   |   |               00000125.sst
+|   |   |               00000126.meta
+|   |   |               00000127.meta
+|   |   |               00000128.meta
 |   |   |               CURRENT
 |   |   |               LOG
 |   |   |               
@@ -104,6 +161,19 @@ E:.
 |   |   |   |   server-reference-manifest.json
 |   |   |   |   
 |   |   |   +---app
+|   |   |   |   +---product
+|   |   |   |   |   \---[id]
+|   |   |   |   |       |   page.js
+|   |   |   |   |       |   page.js.map
+|   |   |   |   |       |   page_client-reference-manifest.js
+|   |   |   |   |       |   
+|   |   |   |   |       \---page
+|   |   |   |   |               app-paths-manifest.json
+|   |   |   |   |               build-manifest.json
+|   |   |   |   |               next-font-manifest.json
+|   |   |   |   |               react-loadable-manifest.json
+|   |   |   |   |               server-reference-manifest.json
+|   |   |   |   |               
 |   |   |   |   \---_not-found
 |   |   |   |       |   page.js
 |   |   |   |       |   page.js.map
@@ -116,78 +186,166 @@ E:.
 |   |   |   |               react-loadable-manifest.json
 |   |   |   |               server-reference-manifest.json
 |   |   |   |               
-|   |   |   \---chunks
-|   |   |       \---ssr
-|   |   |               node_modules_0-4v0_u._.js
-|   |   |               node_modules_0-4v0_u._.js.map
-|   |   |               node_modules_09w7yel._.js
-|   |   |               node_modules_09w7yel._.js.map
-|   |   |               node_modules_next_dist_0yh1sr3._.js
-|   |   |               node_modules_next_dist_0yh1sr3._.js.map
-|   |   |               node_modules_next_dist_client_components_0inhx6q._.js
-|   |   |               node_modules_next_dist_client_components_0inhx6q._.js.map
-|   |   |               node_modules_next_dist_client_components_builtin_forbidden_0ghu-f7.js
-|   |   |               node_modules_next_dist_client_components_builtin_forbidden_0ghu-f7.js.map
-|   |   |               node_modules_next_dist_client_components_builtin_unauthorized_0cjv-23.js
-|   |   |               node_modules_next_dist_client_components_builtin_unauthorized_0cjv-23.js.map
-|   |   |               node_modules_next_dist_compiled_07ho8ku._.js
-|   |   |               node_modules_next_dist_compiled_07ho8ku._.js.map
-|   |   |               node_modules_next_dist_esm_00xse_0._.js
-|   |   |               node_modules_next_dist_esm_00xse_0._.js.map
-|   |   |               node_modules_next_dist_server_route-modules_app-page_0f6k0sl._.js
-|   |   |               node_modules_next_dist_server_route-modules_app-page_0f6k0sl._.js.map
-|   |   |               [externals]_next_dist_0yew8f-._.js
-|   |   |               [externals]_next_dist_0yew8f-._.js.map
-|   |   |               [externals]__0n13xf4._.js
-|   |   |               [externals]__0n13xf4._.js.map
-|   |   |               [root-of-the-server]__06gnfz1._.js
-|   |   |               [root-of-the-server]__06gnfz1._.js.map
-|   |   |               [root-of-the-server]__0954f-e._.js
-|   |   |               [root-of-the-server]__0954f-e._.js.map
-|   |   |               [turbopack]_runtime.js
-|   |   |               [turbopack]_runtime.js.map
-|   |   |               _next-internal_server_app__not-found_page_actions_0eq97pa.js
-|   |   |               _next-internal_server_app__not-found_page_actions_0eq97pa.js.map
+|   |   |   +---chunks
+|   |   |   |   \---ssr
+|   |   |   |           node_modules_0-4v0_u._.js
+|   |   |   |           node_modules_0-4v0_u._.js.map
+|   |   |   |           node_modules_01ed9g5._.js
+|   |   |   |           node_modules_01ed9g5._.js.map
+|   |   |   |           node_modules_047xm.d._.js
+|   |   |   |           node_modules_047xm.d._.js.map
+|   |   |   |           node_modules_09w7yel._.js
+|   |   |   |           node_modules_09w7yel._.js.map
+|   |   |   |           node_modules_0zo2ip4._.js
+|   |   |   |           node_modules_0zo2ip4._.js.map
+|   |   |   |           node_modules_next_12i4inu._.js
+|   |   |   |           node_modules_next_12i4inu._.js.map
+|   |   |   |           node_modules_next_dist_0yh1sr3._.js
+|   |   |   |           node_modules_next_dist_0yh1sr3._.js.map
+|   |   |   |           node_modules_next_dist_client_components_0inhx6q._.js
+|   |   |   |           node_modules_next_dist_client_components_0inhx6q._.js.map
+|   |   |   |           node_modules_next_dist_client_components_builtin_forbidden_0ghu-f7.js
+|   |   |   |           node_modules_next_dist_client_components_builtin_forbidden_0ghu-f7.js.map
+|   |   |   |           node_modules_next_dist_client_components_builtin_global-error_0lgvd_..js
+|   |   |   |           node_modules_next_dist_client_components_builtin_global-error_0lgvd_..js.map
+|   |   |   |           node_modules_next_dist_client_components_builtin_unauthorized_0cjv-23.js
+|   |   |   |           node_modules_next_dist_client_components_builtin_unauthorized_0cjv-23.js.map
+|   |   |   |           node_modules_next_dist_compiled_07ho8ku._.js
+|   |   |   |           node_modules_next_dist_compiled_07ho8ku._.js.map
+|   |   |   |           node_modules_next_dist_esm_00xse_0._.js
+|   |   |   |           node_modules_next_dist_esm_00xse_0._.js.map
+|   |   |   |           node_modules_next_dist_server_route-modules_app-page_0f6k0sl._.js
+|   |   |   |           node_modules_next_dist_server_route-modules_app-page_0f6k0sl._.js.map
+|   |   |   |           [externals]_next_dist_0yew8f-._.js
+|   |   |   |           [externals]_next_dist_0yew8f-._.js.map
+|   |   |   |           [externals]_next_dist_shared_lib_no-fallback-error_external_0fgm~bn.js
+|   |   |   |           [externals]_next_dist_shared_lib_no-fallback-error_external_0fgm~bn.js.map
+|   |   |   |           [externals]__0.o~_~l._.js
+|   |   |   |           [externals]__0.o~_~l._.js.map
+|   |   |   |           [externals]__0n13xf4._.js
+|   |   |   |           [externals]__0n13xf4._.js.map
+|   |   |   |           [root-of-the-server]__0-l-2nw._.js
+|   |   |   |           [root-of-the-server]__0-l-2nw._.js.map
+|   |   |   |           [root-of-the-server]__06gnfz1._.js
+|   |   |   |           [root-of-the-server]__06gnfz1._.js.map
+|   |   |   |           [root-of-the-server]__0954f-e._.js
+|   |   |   |           [root-of-the-server]__0954f-e._.js.map
+|   |   |   |           [root-of-the-server]__0hnsq21._.js
+|   |   |   |           [root-of-the-server]__0hnsq21._.js.map
+|   |   |   |           [root-of-the-server]__0je5zm2._.js
+|   |   |   |           [root-of-the-server]__0je5zm2._.js.map
+|   |   |   |           [turbopack]_runtime.js
+|   |   |   |           [turbopack]_runtime.js.map
+|   |   |   |           _0luh30o._.js
+|   |   |   |           _0luh30o._.js.map
+|   |   |   |           _next-internal_server_app_product_[id]_page_actions_0tcda~o.js
+|   |   |   |           _next-internal_server_app_product_[id]_page_actions_0tcda~o.js.map
+|   |   |   |           _next-internal_server_app__not-found_page_actions_0eq97pa.js
+|   |   |   |           _next-internal_server_app__not-found_page_actions_0eq97pa.js.map
+|   |   |   |           
+|   |   |   \---pages
+|   |   |       |   _app.js
+|   |   |       |   _app.js.map
+|   |   |       |   _document.js
+|   |   |       |   _document.js.map
+|   |   |       |   _error.js
+|   |   |       |   _error.js.map
+|   |   |       |   
+|   |   |       +---_app
+|   |   |       |       build-manifest.json
+|   |   |       |       client-build-manifest.json
+|   |   |       |       next-font-manifest.json
+|   |   |       |       pages-manifest.json
+|   |   |       |       react-loadable-manifest.json
+|   |   |       |       
+|   |   |       +---_document
+|   |   |       |       next-font-manifest.json
+|   |   |       |       pages-manifest.json
+|   |   |       |       react-loadable-manifest.json
+|   |   |       |       
+|   |   |       \---_error
+|   |   |               build-manifest.json
+|   |   |               client-build-manifest.json
+|   |   |               next-font-manifest.json
+|   |   |               pages-manifest.json
+|   |   |               react-loadable-manifest.json
 |   |   |               
 |   |   +---static
 |   |   |   +---chunks
-|   |   |   |       app_globals_css_0w3-wzy._.single.css
-|   |   |   |       app_globals_css_0w3-wzy._.single.css.map
-|   |   |   |       app_layout_tsx_004glpo._.js
-|   |   |   |       node_modules_@swc_helpers_cjs_0-4ujiy._.js
-|   |   |   |       node_modules_@swc_helpers_cjs_0-4ujiy._.js.map
-|   |   |   |       node_modules_next_dist_0tt2wve._.js
-|   |   |   |       node_modules_next_dist_0tt2wve._.js.map
-|   |   |   |       node_modules_next_dist_115brz8._.js
-|   |   |   |       node_modules_next_dist_115brz8._.js.map
-|   |   |   |       node_modules_next_dist_build_polyfills_polyfill-nomodule.js
-|   |   |   |       node_modules_next_dist_build_polyfills_polyfill-nomodule.js.map
-|   |   |   |       node_modules_next_dist_client_0fhqo1d._.js
-|   |   |   |       node_modules_next_dist_client_0fhqo1d._.js.map
-|   |   |   |       node_modules_next_dist_client_components_builtin_global-error_12uwdpq.js
-|   |   |   |       node_modules_next_dist_compiled_0rpq4pf._.js
-|   |   |   |       node_modules_next_dist_compiled_0rpq4pf._.js.map
-|   |   |   |       node_modules_next_dist_compiled_next-devtools_index_0553esy.js
-|   |   |   |       node_modules_next_dist_compiled_next-devtools_index_0553esy.js.map
-|   |   |   |       node_modules_next_dist_compiled_react-dom_058-ah~._.js
-|   |   |   |       node_modules_next_dist_compiled_react-dom_058-ah~._.js.map
-|   |   |   |       node_modules_next_dist_compiled_react-server-dom-turbopack_0p3wegg._.js
-|   |   |   |       node_modules_next_dist_compiled_react-server-dom-turbopack_0p3wegg._.js.map
-|   |   |   |       turbopack-_0p44nws._.js
-|   |   |   |       [next]_internal_font_google_geist_a71539c9_module_css_0w3-wzy._.single.css
-|   |   |   |       [next]_internal_font_google_geist_a71539c9_module_css_0w3-wzy._.single.css.map
-|   |   |   |       [next]_internal_font_google_geist_mono_8d43a2aa_module_css_0w3-wzy._.single.css
-|   |   |   |       [next]_internal_font_google_geist_mono_8d43a2aa_module_css_0w3-wzy._.single.css.map
-|   |   |   |       [root-of-the-server]__06.-pfn._.css
-|   |   |   |       [root-of-the-server]__06.-pfn._.css.map
-|   |   |   |       [turbopack]_browser_dev_hmr-client_hmr-client_ts_0yjw1oe._.js
-|   |   |   |       [turbopack]_browser_dev_hmr-client_hmr-client_ts_0yjw1oe._.js.map
-|   |   |   |       [turbopack]_browser_dev_hmr-client_hmr-client_ts_10mygs7._.js
-|   |   |   |       [turbopack]_browser_dev_hmr-client_hmr-client_ts_10z625~._.js
-|   |   |   |       [turbopack]_browser_dev_hmr-client_hmr-client_ts_10z625~._.js.map
-|   |   |   |       _0p44nws._.js.map
-|   |   |   |       _0rqeker._.js
-|   |   |   |       
+|   |   |   |   |   app_globals_css_0w3-wzy._.single.css
+|   |   |   |   |   app_globals_css_0w3-wzy._.single.css.map
+|   |   |   |   |   app_layout_tsx_004glpo._.js
+|   |   |   |   |   node_modules_0lx093h._.js
+|   |   |   |   |   node_modules_0lx093h._.js.map
+|   |   |   |   |   node_modules_@swc_helpers_cjs_0-4ujiy._.js
+|   |   |   |   |   node_modules_@swc_helpers_cjs_0-4ujiy._.js.map
+|   |   |   |   |   node_modules_next_app_0jt-zj..js
+|   |   |   |   |   node_modules_next_app_0jt-zj..js.map
+|   |   |   |   |   node_modules_next_dist_0rt-2cr._.js
+|   |   |   |   |   node_modules_next_dist_0rt-2cr._.js.map
+|   |   |   |   |   node_modules_next_dist_0tt2wve._.js
+|   |   |   |   |   node_modules_next_dist_0tt2wve._.js.map
+|   |   |   |   |   node_modules_next_dist_0u_w_5s._.js
+|   |   |   |   |   node_modules_next_dist_0u_w_5s._.js.map
+|   |   |   |   |   node_modules_next_dist_115brz8._.js
+|   |   |   |   |   node_modules_next_dist_115brz8._.js.map
+|   |   |   |   |   node_modules_next_dist_build_polyfills_polyfill-nomodule.js
+|   |   |   |   |   node_modules_next_dist_build_polyfills_polyfill-nomodule.js.map
+|   |   |   |   |   node_modules_next_dist_client_0fhqo1d._.js
+|   |   |   |   |   node_modules_next_dist_client_0fhqo1d._.js.map
+|   |   |   |   |   node_modules_next_dist_client_0pe1dg-._.js
+|   |   |   |   |   node_modules_next_dist_client_0pe1dg-._.js.map
+|   |   |   |   |   node_modules_next_dist_client_components_builtin_global-error_01oyzok.js
+|   |   |   |   |   node_modules_next_dist_client_components_builtin_global-error_12uwdpq.js
+|   |   |   |   |   node_modules_next_dist_compiled_0o6l_m6._.js
+|   |   |   |   |   node_modules_next_dist_compiled_0o6l_m6._.js.map
+|   |   |   |   |   node_modules_next_dist_compiled_0rpq4pf._.js
+|   |   |   |   |   node_modules_next_dist_compiled_0rpq4pf._.js.map
+|   |   |   |   |   node_modules_next_dist_compiled_next-devtools_index_0553esy.js
+|   |   |   |   |   node_modules_next_dist_compiled_next-devtools_index_0553esy.js.map
+|   |   |   |   |   node_modules_next_dist_compiled_react-dom_058-ah~._.js
+|   |   |   |   |   node_modules_next_dist_compiled_react-dom_058-ah~._.js.map
+|   |   |   |   |   node_modules_next_dist_compiled_react-server-dom-turbopack_0p3wegg._.js
+|   |   |   |   |   node_modules_next_dist_compiled_react-server-dom-turbopack_0p3wegg._.js.map
+|   |   |   |   |   node_modules_next_dist_shared_lib_0~pg0mt._.js
+|   |   |   |   |   node_modules_next_dist_shared_lib_0~pg0mt._.js.map
+|   |   |   |   |   node_modules_next_dist_shared_lib_12bi_n7._.js
+|   |   |   |   |   node_modules_next_dist_shared_lib_12bi_n7._.js.map
+|   |   |   |   |   node_modules_react-dom_0bruynb._.js
+|   |   |   |   |   node_modules_react-dom_0bruynb._.js.map
+|   |   |   |   |   pages__app_07xvfw~._.js
+|   |   |   |   |   pages__app_0_wu8vy._.js.map
+|   |   |   |   |   pages__error_016chbq._.js.map
+|   |   |   |   |   pages__error_07xvfw~._.js
+|   |   |   |   |   turbopack-pages__app_0_wu8vy._.js
+|   |   |   |   |   turbopack-pages__error_016chbq._.js
+|   |   |   |   |   turbopack-_0p44nws._.js
+|   |   |   |   |   [next]_entry_page-loader_ts_0j~flwh._.js
+|   |   |   |   |   [next]_entry_page-loader_ts_0j~flwh._.js.map
+|   |   |   |   |   [next]_entry_page-loader_ts_0rqw6yo._.js
+|   |   |   |   |   [next]_entry_page-loader_ts_0rqw6yo._.js.map
+|   |   |   |   |   [next]_internal_font_google_geist_a71539c9_module_css_0w3-wzy._.single.css
+|   |   |   |   |   [next]_internal_font_google_geist_a71539c9_module_css_0w3-wzy._.single.css.map
+|   |   |   |   |   [next]_internal_font_google_geist_mono_8d43a2aa_module_css_0w3-wzy._.single.css
+|   |   |   |   |   [next]_internal_font_google_geist_mono_8d43a2aa_module_css_0w3-wzy._.single.css.map
+|   |   |   |   |   [root-of-the-server]__01mw43t._.js
+|   |   |   |   |   [root-of-the-server]__01mw43t._.js.map
+|   |   |   |   |   [root-of-the-server]__06.-pfn._.css
+|   |   |   |   |   [root-of-the-server]__06.-pfn._.css.map
+|   |   |   |   |   [root-of-the-server]__0c0okpg._.js
+|   |   |   |   |   [root-of-the-server]__0c0okpg._.js.map
+|   |   |   |   |   [turbopack]_browser_dev_hmr-client_hmr-client_ts_0yjw1oe._.js
+|   |   |   |   |   [turbopack]_browser_dev_hmr-client_hmr-client_ts_0yjw1oe._.js.map
+|   |   |   |   |   [turbopack]_browser_dev_hmr-client_hmr-client_ts_10mygs7._.js
+|   |   |   |   |   [turbopack]_browser_dev_hmr-client_hmr-client_ts_10z625~._.js
+|   |   |   |   |   [turbopack]_browser_dev_hmr-client_hmr-client_ts_10z625~._.js.map
+|   |   |   |   |   _0p44nws._.js.map
+|   |   |   |   |   _0rqeker._.js
+|   |   |   |   |   
+|   |   |   |   \---pages
+|   |   |   |           _app.js
+|   |   |   |           _error.js
+|   |   |   |           
 |   |   |   +---development
 |   |   |   |       _buildManifest.js
 |   |   |   |       _clientMiddlewareManifest.js
@@ -218,9 +376,10 @@ E:.
 |   |   layout.tsx
 |   |   page.tsx
 |   |   
-|   \---data
-|       |   products.js
-|       |   
+|   +---data
+|   |       products.js
+|   |       
+|   \---product
 |       \---[id]
 |               page.jsx
 |               
@@ -24866,6 +25025,7 @@ E:.
         file.svg
         globe.svg
         next.svg
+        robots.txt
         vercel.svg
         window.svg
         

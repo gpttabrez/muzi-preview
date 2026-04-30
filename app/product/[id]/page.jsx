@@ -1,4 +1,4 @@
-import { PRODUCTS } from "../../data/product";
+import { PRODUCTS } from "../../../data/products";
 
 export async function generateMetadata({ params }) {
   const product = PRODUCTS.find(
