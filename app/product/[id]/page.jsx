@@ -1,13 +1,14 @@
 import { PRODUCTS } from "../../../data/products";
 
-// ✅ Add caching for stable OG scraping
-export const revalidate = 60;
+// 🔥 FORCE STATIC (critical for Facebook)
+export const dynamic = "force-static";
+export const revalidate = 3600;
+export const dynamicParams = false;
 
-export async function generateMetadata({ params }) {
-  const resolvedParams = await params;
-
+// ✅ Metadata (no async params needed)
+export function generateMetadata({ params }) {
   const product = PRODUCTS.find(
-    (p) => String(p.id) === String(resolvedParams.id)
+    (p) => String(p.id) === String(params.id)
   );
 
   if (!product) {
@@ -19,19 +20,19 @@ export async function generateMetadata({ params }) {
   return {
     title: product.name,
     description: `₹${product.price} | MUZI Fashions`,
-openGraph: {
-  title: product.name,
-  description: `Buy now for ₹${product.price}`,
-  url: `https://muzi-preview.vercel.app/product/${product.id}`, // ✅ ADD THIS
-  siteName: "MUZI Fashions",
-  images: [
-    {
-      url: product.image,
-      width: 1200,
-      height: 630,
+    openGraph: {
+      title: product.name,
+      description: `Buy now for ₹${product.price}`,
+      url: `https://muzi-preview.vercel.app/product/${product.id}`,
+      siteName: "MUZI Fashions",
+      images: [
+        {
+          url: product.image,
+          width: 1200,
+          height: 630,
+        },
+      ],
     },
-  ],
-},
     twitter: {
       card: "summary_large_image",
       title: product.name,
@@ -41,11 +42,10 @@ openGraph: {
   };
 }
 
-export default async function ProductPage({ params }) {
-  const resolvedParams = await params;
-
+// 🔥 REMOVE async → prevents streaming
+export default function ProductPage({ params }) {
   const product = PRODUCTS.find(
-    (p) => String(p.id) === String(resolvedParams.id)
+    (p) => String(p.id) === String(params.id)
   );
 
   if (!product) {
