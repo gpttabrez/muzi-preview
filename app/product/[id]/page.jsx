@@ -1,8 +1,10 @@
 import { PRODUCTS } from "../../../data/products";
 
 export async function generateMetadata({ params }) {
+  const resolvedParams = await params;
+
   const product = PRODUCTS.find(
-    (p) => String(p.id) === String(params.id)
+    (p) => String(p.id) === String(resolvedParams.id)
   );
 
   if (!product) {
@@ -35,8 +37,10 @@ export async function generateMetadata({ params }) {
 }
 
 export default async function ProductPage({ params }) {
+  const resolvedParams = await params;
+
   const product = PRODUCTS.find(
-    (p) => String(p.id) === String(params.id)
+    (p) => String(p.id) === String(resolvedParams.id)
   );
 
   if (!product) {
@@ -62,7 +66,7 @@ export default async function ProductPage({ params }) {
       </p>
 
       <a
-        href={`https://muzigroups.com/product/${product.id}`}
+        href={`https://muzigroups.com/?product=${product.id}`}
         style={{
           display: "inline-block",
           marginTop: "20px",
