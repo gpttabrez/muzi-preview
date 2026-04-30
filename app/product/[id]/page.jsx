@@ -1,5 +1,8 @@
 import { PRODUCTS } from "../../../data/products";
 
+// ✅ Add caching for stable OG scraping
+export const revalidate = 60;
+
 export async function generateMetadata({ params }) {
   const resolvedParams = await params;
 
