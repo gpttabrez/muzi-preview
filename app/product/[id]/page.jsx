@@ -2,7 +2,7 @@ import { PRODUCTS } from "../../data/products";
 
 export async function generateMetadata({ params }) {
   const product = PRODUCTS.find(
-    (p) => p.id === Number(params.id)
+    (p) => String(p.id) === String(params.id)
   );
 
   if (!product) {
@@ -36,7 +36,7 @@ export async function generateMetadata({ params }) {
 
 export default async function ProductPage({ params }) {
   const product = PRODUCTS.find(
-    (p) => p.id === Number(params.id)
+    (p) => String(p.id) === String(params.id)
   );
 
   if (!product) {
